@@ -43,6 +43,5 @@ A full-stack book inventory management system with **role-based access control**
 ### Backend Setup
 
 ```bash
-git clone https://github.com/your-username/shelf-book-assignment.git
-cd shelf-book-assignment/backend
-npm install
+git clone https://github.com/kesari99/shelf-book-assignment.git
+npm run dev
