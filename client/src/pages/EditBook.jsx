@@ -26,7 +26,7 @@ const EditBook = () => {
     const token = Cookies.get('token');
 
     try {
-      const res = await fetch(`/api/books/updateBook`, {
+      const res = await fetch(`https://shelf-book-assignment.onrender.com/api/books/updateBook`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

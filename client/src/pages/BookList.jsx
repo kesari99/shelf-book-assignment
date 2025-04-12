@@ -39,7 +39,7 @@ const BookList = () => {
     if (window.confirm('Are you sure you want to delete this book?')) {
       try {
         const token = Cookies.get('token');
-        const response = await fetch(`/api/books/deleteBook/${email}`, {
+        const response = await fetch(`https://shelf-book-assignment.onrender.com/api/books/deleteBook/${email}`, {
           method: 'DELETE',
           headers: {
             'Authorization': `Bearer ${token}`

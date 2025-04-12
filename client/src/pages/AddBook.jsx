@@ -28,7 +28,7 @@ const AddBook = () => {
     setLoading(true)
 
     try {
-      const res = await fetch('/api/books/addBook', {
+      const res = await fetch('https://shelf-book-assignment.onrender.com/api/books/addBook', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
