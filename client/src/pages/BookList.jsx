@@ -16,7 +16,7 @@ const BookList = () => {
   const fetchBooks = async () => {
     try {
       const token = Cookies.get('token');
-      const res = await fetch('/api/books/getBooks', {
+      const res = await fetch('https://shelf-book-assignment.onrender.com/api/books/getBooks', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`
