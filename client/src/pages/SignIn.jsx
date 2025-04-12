@@ -31,7 +31,11 @@ const SignIn = () => {
         return;
       }
 
-      Cookies.set('token', data.token, { expires: 7 })
+      Cookies.set('token', data.token, { 
+        expires: 7,
+        secure: true,
+      sameSite: 'Strict'
+      })
       dispatch(signInSuccess({ 
         user: data.user,
         role: data.user.role 

@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import { connectToDB } from './config/dbConnection.mjs';
-
+import cors from 'cors'
 import authRoutes from './routes/authRoutes.mjs';
 import bookRoutes from './routes/bookRoutes.mjs';
 
@@ -11,6 +11,12 @@ import bookRoutes from './routes/bookRoutes.mjs';
 dotenv.config()
 const app = express()
 app.use(express.json())
+
+app.use(cors({
+    origin:process.env.CLIENT_URL,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}))
 
 connectToDB()
 
