@@ -13,7 +13,7 @@ const app = express()
 app.use(express.json())
 
 app.use(cors({
-    origin:process.env.CLIENT_URL,
+    origin:['https://shelf-book-assignment-frontend.onrender.com', 'http://localhost:3000'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }))
